@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Злата и Вячеслав | Свадьба</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="invitation">
+
+    <!-- Фон приглашения -->
+    <img src="invitation.png"
+         alt="Свадебное приглашение"
+         class="invitation-image">
+
+    <!-- Анкета гостя -->
+    <section class="rsvp">
+        <h1>Анкета</h1>
+
+        <p class="rsvp-description">
+            Будем рады узнать, сможете ли вы
+            разделить с нами этот день
+        </p>
+
+        <form id="guest-form">
+
+            <input
+                type="text"
+                id="guest-name"
+                name="guestName"
+                placeholder="ФИО"
+                autocomplete="name"
+                required
+            >
+
+            <label class="radio-option">
+                <input type="radio"
+                       name="attendance"
+                       value="yes"
+                       required>
+                <span>С радостью приду</span>
+            </label>
+
+            <label class="plus-one">
+                <input type="checkbox"
+                       name="plusOne">
+                <span>Я буду +1</span>
+            </label>
+
+            <label class="radio-option">
+                <input type="radio"
+                       name="attendance"
+                       value="no">
+                <span>К сожалению, не смогу</span>
+            </label>
+
+            <button type="submit">
+                ОТПРАВИТЬ
+            </button>
+
+            <p id="form-message" aria-live="polite"></p>
+
+        </form>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

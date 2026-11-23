@@ -1,0 +1,275 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: #fbe0e5;
+}
+
+.invitation {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.invitation-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.rsvp {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    padding: 0 8%;
+    text-align: center;
+}
+
+.rsvp h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 58px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.rsvp-description {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+#guest-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+}
+
+#guest-name {
+    width: 100%;
+    padding: 9px 0;
+    border: none;
+    border-bottom: 1px solid #fbe0e5;
+    background: transparent;
+    color: #fbe0e5;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    outline: none;
+}
+
+#guest-name::placeholder {
+    color: #fbe0e5;
+    opacity: 1;
+}
+
+.radio-option,
+.plus-one {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.radio-option input,
+.plus-one input {
+    accent-color: #fbe0e5;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.plus-one {
+    margin-left: 27px;
+    font-size: 11px;
+}
+
+button {
+    align-self: center;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #fbe0e5;
+    color: #431b25;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #edbcc8;
+}
+
+#form-message {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+@media (max-width: 360px) {
+    .rsvp h1 {
+        font-size: 44px;
+    }
+
+    #guest-form {
+        gap: 10px;
+    }
+}
+
+/* Шрифт Ouvality */
+
+
+@font-face {
+    font-family: "Ouvality";
+    src: url("fonts/Ouvality.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Заголовок АНКЕТА */
+
+.rsvp h1 {
+    font-family: "Ouvality", cursive;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ffe7e7;
+}
+
+/* Описание анкеты */
+
+.rsvp-description {
+    font-family: "Cormorant Infant", serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Поле ФИО */
+
+#guest-name {
+    font-family: "Cormorant Infant", serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#guest-name::placeholder {
+    font-family: "Cormorant Infant", serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* С радостью приду */
+
+.radio-option {
+    font-family: "Cormorant Infant", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Я буду с +1 */
+
+.plus-one {
+    font-family: "Cormorant Infant", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* К сожалению, не смогу */
+
+.radio-option:has(input[value="no"]) {
+    font-size: 20px;
+}
+
+/* Кнопка ОТПРАВИТЬ */
+
+#guest-form button {
+    width: 172px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    border-radius: 25px;
+
+    background-color: #ffe7e7;
+    color: #431b25;
+
+    font-family: "Cormorant Infant", serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* Яркие кружочки выбора */
+
+.radio-option input,
+.plus-one input {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 19px;
+    height: 19px;
+    min-width: 19px;
+
+    border: 2px solid #FFE7E7;
+    background-color: rgba(255, 231, 231, 0.12);
+
+    cursor: pointer;
+    box-shadow: 0 0 7px rgba(255, 231, 231, 0.45);
+}
+
+/* Круглые радиокнопки */
+
+.radio-option input {
+    border-radius: 50%;
+}
+
+/* Отмеченная радиокнопка */
+
+.radio-option input:checked {
+    background-color: #FFE7E7;
+    box-shadow:
+        inset 0 0 0 4px #251A20,
+        0 0 9px rgba(255, 231, 231, 0.8);
+}
+
+/* Квадратный чекбокс +1 */
+
+.plus-one input {
+    border-radius: 4px;
+}
+
+/* Отмеченный чекбокс */
+
+.plus-one input:checked {
+    background-color: #FFE7E7;
+    box-shadow: 0 0 10px rgba(255, 231, 231, 0.8);
+}
+
+/* Галочка внутри чекбокса */
+
+.plus-one input:checked::after {
+    content: "✓";
+    display: block;
+    text-align: center;
+    color: #251A20;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+}
